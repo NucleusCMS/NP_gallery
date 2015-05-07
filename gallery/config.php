@@ -17,7 +17,11 @@ include_once($NP_GALLERY_DIR.'forms.php');
 include_once($NP_GALLERY_DIR.'admin.php');
 include_once($NP_GALLERY_DIR.'template.php');
 include_once($NP_GALLERY_DIR.'comments.php');
-include_once($NP_GALLERY_DIR.'language/english.php'); //change this for different language
+
+$lang_name = str_replace( array('\\','/'), '', getLanguageName());
+if(!is_file("{$NP_GALLERY_DIR}language/{$lang_name}.php")) $lang_name = 'english';
+include_once("{$NP_GALLERY_DIR}language/{$lang_name}.php");
+include_once("{$NP_GALLERY_DIR}language/english.php"); //change this for different language
 
 global $NPG_CONF, $member, $gmember;
 $NPG_CONF = getNPGConfig();
