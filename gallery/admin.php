@@ -525,7 +525,7 @@ class NPG_ADMIN {
 		echo '<input type="hidden" name="action" value="admin" />';
 		echo '<input type="hidden" name="function" value="massupload" />';
 		echo '<input type="submit" value="'.__NPG_ADMIN_MASSUPLOAD.'" />';
-		mysql_data_seek($res,0);
+		if (mysql_num_rows($res) > 0) mysql_data_seek($res,0);
 		echo '<select name="uploadalbum">';
 		echo '<option value="-1">'.__NPG_ADMIN_NEWALBUM;
 		while ($row=mysql_fetch_object($res)) {
