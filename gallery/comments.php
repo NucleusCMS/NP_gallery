@@ -121,7 +121,8 @@ class NPG_COMMENTS {
 		
 		$result = 1;
 		
-		$manager->notify('ValidateForm', array('type' => 'comment', 'comment' => &$comment, 'error' => &$result));
+		$param = array('type' => 'comment', 'comment' => &$comment, 'error' => &$result);
+		$manager->notify('ValidateForm', $param);
 		
 		return $result;
 	}

@@ -431,7 +431,8 @@ class PICTURE {
 			$actions = new PICTURE_ACTIONS($this);
 			$parser = new PARSER($actions->getDefinedActions(), $actions);
 			$actions->setparser($parser);
-			$manager->notify('NPgPrePicture',array('picture',&$this));
+			$param = array('picture',&$this);
+			$manager->notify('NPgPrePicture',$param);
 			$this->_views();
 			$template_SLIDESHOWC = $this->template->section['ITEM_SLIDESHOWC'];
 			$template_SLIDESHOWT = $this->template->section['ITEM_SLIDESHOWT'];
@@ -444,7 +445,8 @@ class PICTURE {
 			$actions = new PICTURE_ACTIONS($this);
 			$parser = new PARSER($actions->getDefinedActions(), $actions);
 			$actions->setparser($parser);
-			$manager->notify('NPgPrePicture',array('picture',&$this));
+			$param = array('picture',&$this);
+			$manager->notify('NPgPrePicture',$param);
 			$this->_views();
 			$parser->parse($template_TOOLTIPSHEADER);
 			$parser->parse($template_SLIDESHOWC);
@@ -753,7 +755,8 @@ class PICTURE_ACTIONS extends BaseActions {
 	
 	function parse_callback($eventName, $type) {
 		global $manager;
-		$manager->notify($eventName, array('type' => $type));
+		$param = array('type' => $type);
+		$manager->notify($eventName, $param);
 	}
 	
 	function parse_errordiv() {}

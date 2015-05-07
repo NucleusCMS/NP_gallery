@@ -19,7 +19,8 @@ class NPG_ADMIN {
 		array_push($this->tabs, array('action' => 'templates', 'active' =>'templates', 'title'=>__NPG_ADMIN_TAB_TEMPLATES));
 		array_push($this->tabs, array('action' => 'functions', 'active' =>'admin', 'title'=>__NPG_ADMIN_TAB_ADMIN));
 
-		$manager->notify('NPgAdminTab', array('tabs' => &$this->tabs ));
+		$param = array('tabs' => &$this->tabs );
+		$manager->notify('NPgAdminTab', $param);
 	}
 	
 	function action($action) {

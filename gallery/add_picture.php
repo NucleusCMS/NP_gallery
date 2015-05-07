@@ -222,7 +222,8 @@ switch($type) {
 				}
 				unset($pict);
 				
-				$manager->notify('NPgPostAddPicture',array('pictureid' => $newid));
+				$param = array('pictureid' => $newid);
+				$manager->notify('NPgPostAddPicture',$param);
 			}
 			else {
 				echo "$filename not added due to bad album permissions<br/>";

@@ -229,7 +229,8 @@ function editPictureForm($id) {
 				}
 				echo '</select></td></tr></table>';
 			}
-			$manager->notify('NPgEditPictureFormExtras',array('pictureid'=>$id,'title'=>$data->title,'description'=>$data->description));
+			$param = array('pictureid'=>$id,'title'=>$data->title,'description'=>$data->description);
+			$manager->notify('NPgEditPictureFormExtras',$param);
 			
 			?>
 			<br/><input type="submit" value="<?php echo __NPG_FORM_SUBMIT_CHANGES; ?>"></table>
@@ -405,7 +406,8 @@ function addTempPictureForm($albumid = 0) {
 				else echo '<input type="hidden" name="album'.$i.'" value="'.$albumid.'">';
 				echo '</select></td></tr></table>';
 				
-				$manager->notify('NPgAddPictureFormExtras',array('i'=>$i,'ttid'=>$row['tempid'], 'filename' =>$row['filename'],'thumbfilename'=>$row['thumbfilename'],'intfilename'=>$row['intfilename'],'title'=>$row['title'],'description'=>$row['description'],'albumid'=>$albumid ));
+				$param = array('i'=>$i,'ttid'=>$row['tempid'], 'filename' =>$row['filename'],'thumbfilename'=>$row['thumbfilename'],'intfilename'=>$row['intfilename'],'title'=>$row['title'],'description'=>$row['description'],'albumid'=>$albumid );
+				$manager->notify('NPgAddPictureFormExtras',$param);
 				$i++;
 			}
 			else echo '<br>'.$row['filename'].' '.__NPG_FORM_NOADD.': '.$row['error'].'<br/><br/>';
