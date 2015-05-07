@@ -303,4 +303,3 @@ function converttimestamp($d) {
 	return $rd;
 }
 
-?>

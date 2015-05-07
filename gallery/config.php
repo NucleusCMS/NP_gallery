@@ -25,4 +25,3 @@ $gmember = new GALLERY_MEMBER;
 if($member->getID()) $gmember->readFromID($member->getID()); else $gmember->makeguest();
 $gmember->loggedin = $member->isloggedin();
 
-?>

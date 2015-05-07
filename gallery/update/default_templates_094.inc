@@ -167,4 +167,3 @@ $name = 'PROMO_IMAGES';
 $content = '<li><a href="<%picturelink%>"><img style="<%centeredtopmargin(140,0)%>" src="<%thumbnail%>" /></a></li>';
 $template->setTemplate($name,$content);
 
-?>

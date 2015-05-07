@@ -424,6 +424,3 @@ function addTempPictureForm($albumid = 0) {
 
 }
 
-
-
-?>

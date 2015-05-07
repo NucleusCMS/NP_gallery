@@ -808,4 +808,3 @@ class PICTURE_ACTIONS extends BaseActions {
 	}
 
 }
-?>

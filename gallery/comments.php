@@ -239,4 +239,3 @@ class NPG_COMMENTACTIONS extends BaseActions {
 	
 }
 
-?>

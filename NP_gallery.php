@@ -694,4 +694,3 @@ class NPG_EXT_ITEM_ACTIONS extends BaseActions {
 		}
 	}
 }
-?>

@@ -465,5 +465,3 @@ function add_temp($albumid = 0, $filename, $filetype, $filesize, $filetempname, 
 
 }
 
-
-?>
