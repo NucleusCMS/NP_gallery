@@ -44,7 +44,7 @@ class NP_gallery extends NucleusPlugin {
 	function getName() {return 'Nucleus Image Gallery';}
 	function getAuthor()  {	return 'John Bradshaw, Gene Cambridge Tsai';	}
 	function getURL() 	{ return 'http://www.sircambridge.net/nucleus/index.php?itemid=57'; 	}
-	function getVersion() { return '0.95'; }
+	function getVersion() { return '0.96'; }
 	function getDescription() { return 'Image Gallery for Nucleus CMS'; 	}
 	function supportsFeature($what) { switch($what) {
 		case 'SqlTablePrefix': return 1; break;
