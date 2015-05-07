@@ -15,6 +15,7 @@ function generateLink($type,$vars = 'date') {
 			break;
 		case 'editAlbumF': 
 			$link = $CONF['PluginURL'].'gallery/index.php?action=album&amp;id='.$vars;
+			if (getNucleusVersion() >= 331) $link = $manager->addTicketToUrl($link);
 			break;
 		case 'item': 
 		case 'album': 
