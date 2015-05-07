@@ -104,7 +104,7 @@ class NPG_COMMENTS {
 	function isValidComment($comment) {
 		global $member,$manager;
 		
-		if (eregi('[a-zA-Z0-9|\.,;:!\?=\/\\]{90,90}',$comment['body']) != false)
+		if (preg_match('@[a-zA-Z0-9|\.,;:!\?=/\\]{90,90}@i',$comment['body']) != false)
 			return _ERROR_COMMENT_LONGWORD;
 
 		// check lengths of comment

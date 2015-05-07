@@ -100,7 +100,7 @@ function resizeImage($orig_filename, $target_w, $target_h, $target_filename) {
 		$output = array();
 		$target_file_esc = escapeshellarg($abs_dir.$target_filename);
 		
-		if (eregi("win",$_ENV['OS'])) {
+		if (preg_match("/win/i",$_ENV['OS'])) {
 		$imgFile = str_replace("'","\"" ,$imgFile );
 			 $cmd = "\"".str_replace("\\","/", $NPG_CONF['im_path'])."convert\" -quality {$NPG_CONF['im_quality']} {$NPG_CONF['im_options']} -resize {$target_w}x{$target_h} ".str_replace("\\","/" ,$imgFile )." ".str_replace("\\","/" ,$target_file_esc );
 			 exec ("\"$cmd\"", $output, $retval);

@@ -396,8 +396,8 @@ function add_temp($albumid = 0, $filename, $filetype, $filesize, $filetempname, 
 		$error = 'FILE_TOO_BIG';
 	else {
 		//check filetype -- currently only jpeg supported	
-		if (eregi("\.jpeg$",$filename)) $ok = 1;
-		if (eregi("\.jpg$",$filename)) $ok = 1;
+		if (preg_match("/\.jpeg$/i",$filename)) $ok = 1;
+		if (preg_match("/\.jpg$/i",$filename)) $ok = 1;
 		if (!$ok) 
 			$error='BADFILETYPE';
 			else {
