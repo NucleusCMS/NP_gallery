@@ -450,7 +450,7 @@ class NP_gallery extends NucleusPlugin {
 		
 		selectSkin('NPGallery');
 		
-		$skin =& new SKIN($skinid);
+		$skin = new SKIN($skinid);
 		$skin->parse('index');
 	}
 	
