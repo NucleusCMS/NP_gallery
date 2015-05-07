@@ -734,11 +734,11 @@ class PICTURE_ACTIONS extends BaseActions {
 		$body = postVar('body');
 		
 		$this->formdata = array(
-			'destinationurl' => htmlspecialchars($destinationurl),
-			'actionurl' => htmlspecialchars($actionurl),
+			'destinationurl' => htmlspecialchars($destinationurl,ENT_QUOTES,_CHARSET),
+			'actionurl' => htmlspecialchars($actionurl,ENT_QUOTES,_CHARSET),
 			'itemid' => $this->CurrentPicture->getID(),
-			'user' => htmlspecialchars($user),
-			'userid' => htmlspecialchars($userid),
+			'user' => htmlspecialchars($user,ENT_QUOTES,_CHARSET),
+			'userid' => htmlspecialchars($userid,ENT_QUOTES,_CHARSET),
 			'body' => '',
 			'membername' => $member->getDisplayName(),
 			'rememberchecked' => cookieVar($CONF['CookiePrefix'] .'comment_user')?'checked="checked"':''
